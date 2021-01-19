@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -144,21 +144,24 @@
         }
 
         // Infinite scroll
-        if (window.location.href.slice(window.location.href.indexOf('?') + 1).split("?")[0] == 'videos' || window.location.href.indexOf('?') < 0) {
+        $(window).bind('load', function () {
+            if (window.location.href.slice(window.location.href.indexOf('?') + 1).split("?")[0] == 'videos' || window.location.href.indexOf('?') < 0) {
 
-            $(window).scroll(function () {
-                
-                if ($(window).scrollTop() + 10 >= ($(document).height() - $(window).outerHeight())) {
-                    if (window.location.href.slice(window.location.href.indexOf('?') + 1).split("?")[0] == 'videos') {
-                        loadIframeCards();
+                $(window).scroll(function () {
+
+                    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight-10) {
+                        if (window.location.href.slice(window.location.href.indexOf('?') + 1).split("?")[0] == 'videos') {
+                            loadIframeCards();
+                        }
+                        else {
+                            loadNewsCards();
+                        }
+
                     }
-                    else {
-                        loadNewsCards();
-                    }
-                    
-                }
-            });
-        }
+                });
+            }
+        });
+        
         function loadIframeCards() {
             if (!$('.upToDate').length) {
                 $('.loading-div').show();
