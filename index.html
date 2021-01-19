@@ -95,7 +95,7 @@
                             $('#data').append('<div class="col-12 px-0"><div class="h-100"> <img onerror="replaceImage($(this))" src="' + item.coverImage + '" class="card-img-top" alt="' + item.title + '"> <div class="card-body inner-card-body"> <div class="copyrights">' + item.copyrights + '</div><h5 class="card-title">' + item.title + '</h5><div class="date"><small>' + newsDate.toLocaleDateString("ar-OM", options) + '</small></div> <div class="card-text">' + item.bodyText + '</div > </div > </div ></div >');
                             return false;
                         }
-                        $('.loading-div').hide();
+                        setTimeout(function () { $('.loading-div').hide(); }, 3000);
 
 
                     });
@@ -185,7 +185,7 @@
 
                 }).fail(function () {
                     $('#data').append('<div class="col-12 px-0"> يوجد خطأ في العملية</div>');
-                }).always(function () { $('.loading-div').hide(); });
+                }).always(function () { setTimeout(function () { $('.loading-div').hide(); }, 3000) });
 
             }
         }
@@ -212,7 +212,7 @@
 
                 }).fail(function () {
                     $('#data').append('<div class="col-12 px-0"> يوجد خطأ في العملية</div>');
-                }).always(function () { $('.loading-div').hide(); });
+                }).always(function () { setTimeout(function () { $('.loading-div').hide();},3000) });
 ;
             }
         }
