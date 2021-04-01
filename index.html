@@ -1,15 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no,maximum-scale=1">
     <link rel="stylesheet" href="bootstrap.min.css"/>
-    <link href="style.css?v=1" rel="stylesheet" />
+    <link href="style.css?v=1.0" rel="stylesheet" />
 </head>
 <body>
 
 
     <div class="wrapper">
+        
+        
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -30,7 +32,6 @@
                     <a href="#">انستاجرام: <span style="direction:ltr;">@tennisArabia</span></a>
                 </li>
 
-
             </ul>
 
 
@@ -42,8 +43,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="sidebarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <img src="back.svg" class="nav-icon back-icon" onclick="window.history.go(-1); return false;" />
-                <img src="refresh.svg" class="nav-icon refresh-icon" onclick="location.reload(); return false;" />
+                <img src="back.svg" class="nav-icon back-icon" />
+                <img src="refresh.svg" class="nav-icon refresh-icon" onclick="location.reload();window.scrollTo(0,0); return false;" />
                 <a class="navbar-brand" href="#"><storng>تنس أرابيا</storng></a>
             </nav>
 
@@ -57,10 +58,13 @@
 
             </div>
         </div>
+        <div id="details">
+            <div class="col-12 lds-dual-ring loading-div" style="display:none;"></div>
+        </div>
     </div>
     <script src="jquery.min.js"></script>
-    <script src="bootstrap.min.js"></script>
-    <script src="jquery.js"></script>
+    <script src="bootstrap.min.js?v=1"></script>
+    <script src="jquery.js?v=1.0"></script>
 
 
 </body>
