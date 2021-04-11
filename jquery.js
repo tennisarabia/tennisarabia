@@ -68,7 +68,7 @@ function loadNewsDetails(newsId) {
     $("#details .news-details").remove();
 
     $('#details').addClass('show');
-    $.getJSON("https://tennisarabia.github.io/data.json").done(function (result) {
+    $.getJSON("https://jsonblob.com/api/jsonBlob/dccb61b5-8bc0-11eb-9095-5d3203ab58e5").done(function (result) {
         $('.loading-div').show();
         loadMenu(result);
 
@@ -183,7 +183,7 @@ function loadIframeCards() {
 function loadNewsCards() {
     if (!$('.upToDate').length) {
         $('.loading-div').show();
-        $.getJSON("https://tennisarabia.github.io/data.json").done(function (result) {
+        $.getJSON("https://jsonblob.com/api/jsonBlob/dccb61b5-8bc0-11eb-9095-5d3203ab58e5").done(function (result) {
             loadMenu(result);
             if (currentItem >= result.news.length && !$('.upToDate').length) {
                 $("#data").append('<div class="col-12 mt-4 upToDate text-center">لا يوجد المزيد من الأخبار</div>');
